@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "moremultiblock:block/radioactive_waste_vault",
+    "down": "moremultiblock:block/radioactive_waste_vault_bottom",
+    "up": "moremultiblock:block/radioactive_waste_vault",
+    "north": "moremultiblock:block/radioactive_waste_vault_bottom_side",
+    "south": "moremultiblock:block/radioactive_waste_vault_bottom_side",
+    "west": "moremultiblock:block/radioactive_waste_vault_bottom_side",
+    "east": "moremultiblock:block/radioactive_waste_vault_bottom_side"
+  }
+}

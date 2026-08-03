@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "moremultiblock:block/radioactive_waste_vault"
+    },
+    "active=true,part_position=none": {
+      "model": "moremultiblock:block/radioactive_waste_vault"
+    },
+    "active=true,part_position=center": {
+      "model": "moremultiblock:block/radioactive_waste_vault_center"
+    },
+    "active=true,part_position=top": {
+      "model": "moremultiblock:block/radioactive_waste_vault_top"
+    },
+    "active=true,part_position=bottom": {
+      "model": "moremultiblock:block/radioactive_waste_vault_bottom"
+    }
+  }
+}
