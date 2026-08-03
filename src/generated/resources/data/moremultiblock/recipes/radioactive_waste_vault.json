@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "L": {
+      "tag": "forge:storage_blocks/lead"
+    },
+    "S": {
+      "tag": "forge:storage_blocks/steel"
+    }
+  },
+  "pattern": [
+    " L ",
+    "LSL",
+    " L "
+  ],
+  "result": {
+    "count": 4,
+    "item": "moremultiblock:radioactive_waste_vault"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "tag": "forge:circuits/advanced"
+    },
+    "V": {
+      "item": "moremultiblock:radioactive_waste_vault"
+    }
+  },
+  "pattern": [
+    " V ",
+    "VAV",
+    " V "
+  ],
+  "result": {
+    "item": "moremultiblock:radioactive_waste_valve"
+  },
+  "show_notification": true
+}
