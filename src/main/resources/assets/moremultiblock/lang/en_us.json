@@ -1,0 +1,9 @@
+{
+  "block.moremultiblock.radioactive_waste_vault": "Radioactive Waste Vault",
+  "block.moremultiblock.radioactive_waste_valve": "Radioactive Waste Valve",
+
+  "gui.moremultiblock.radioactive_waste_vault": "Radioactive Waste Vault",
+
+  "description.moremultiblock.radioactive_waste_vault": "The casing used in the Radioactive Waste Vault multiblock, a structure capable of safely storing radioactive waste. WARNING: Breaking the vault will release its contents into the atmosphere.",
+  "description.moremultiblock.radioactive_waste_valve": "A valve that can be placed on a Radioactive Waste Vault multiblock, allowing radioactive waste to be inserted and extracted via external piping."
+}
