@@ -56,7 +56,7 @@ public class GuiRadioactiveWasteVault extends GuiMekanismTile<TileEntityRadioact
         }).spacing(2));
         addRenderableWidget(new GuiDownArrow(this, 150, 43));
         addRenderableWidget(new GuiContainerEditModeTab<>(this, tile));
-        addRenderableWidget(new GuiGasGauge(() -> tile.getMultiblock().getWasteTank(), () -> tile.getMultiblock().getGasTanks(null), GaugeType.WIDE, this, 7, 20, 34, 56));
+        addRenderableWidget(new GuiGasGauge(() -> tile.getMultiblock().getWasteTank(), () -> tile.getMultiblock().getGasTanks(null), GaugeType.MEDIUM, this, 7, 20, 34, 56));
     }
 
     private void addStored(List<Component> ret, IChemicalTank<?, ?> tank) {
