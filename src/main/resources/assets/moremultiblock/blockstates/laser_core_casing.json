@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "moremultiblock:block/laser_core_casing"
+    }
+  }
+}
