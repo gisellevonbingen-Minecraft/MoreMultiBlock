@@ -1,9 +1,12 @@
 package moremultiblock;
 
 import mekanism.common.command.builders.BuildCommand;
+import mekanism.common.lib.multiblock.MultiblockCache;
 import mekanism.common.lib.multiblock.MultiblockManager;
 import moremultiblock.common.MMBLang;
 import moremultiblock.common.command.builders.MoreMultiBlockBuilders;
+import moremultiblock.common.content.lasercore.LaserCoreMultiblockData;
+import moremultiblock.common.content.lasercore.LaserCoreValidator;
 import moremultiblock.common.content.vault.VaultCache;
 import moremultiblock.common.content.vault.VaultMultiblockData;
 import moremultiblock.common.content.vault.VaultValidator;
@@ -27,6 +30,7 @@ public class MoreMultiblock {
     public static final String MODID = "moremultiblock";
     public static boolean JustEnoughMekanismMultiblocksLoaded = false;
     public static final MultiblockManager<VaultMultiblockData> vaultManager = new MultiblockManager<>("radioactiveWasteVault", VaultCache::new, VaultValidator::new);
+    public static final MultiblockManager<LaserCoreMultiblockData> laserCoreManager = new MultiblockManager<>("laserCore", MultiblockCache::new, LaserCoreValidator::new);
 
 
     public static ResourceLocation rl(String path) {
