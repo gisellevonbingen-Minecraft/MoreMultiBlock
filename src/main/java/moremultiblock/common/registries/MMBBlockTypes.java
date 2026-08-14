@@ -4,10 +4,7 @@ import mekanism.common.block.attribute.Attributes;
 import mekanism.common.content.blocktype.BlockTypeTile;
 import mekanism.common.content.blocktype.BlockTypeTile.BlockTileBuilder;
 import moremultiblock.common.MMBLang;
-import moremultiblock.common.tile.multiblock.TileEntityLaserCoreCasing;
-import moremultiblock.common.tile.multiblock.TileEntityLaserCorePort;
-import moremultiblock.common.tile.multiblock.TileEntityRadioactiveWasteValve;
-import moremultiblock.common.tile.multiblock.TileEntityRadioactiveWasteVault;
+import moremultiblock.common.tile.multiblock.*;
 
 public class MMBBlockTypes {
 
@@ -41,5 +38,11 @@ public class MMBBlockTypes {
             .withGui(() -> MMBContainerTypes.LASER_CORE_CASING,MMBLang.LASER_CORE)
             .with(Attributes.ACTIVE)
             .externalMultiblock()
+            .build();
+
+    public static final BlockTypeTile<TileEntityLaserCore> LASER_CORE = BlockTileBuilder
+            .createBlock(() -> MMBTileEntityTypes.LASER_CORR,MMBLang.DESCRIPTION_LASER_CORE)
+            .with(Attributes.ACTIVE)
+            .internalMultiblock()
             .build();
 }

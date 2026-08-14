@@ -4,10 +4,7 @@ import mekanism.common.registration.impl.TileEntityTypeDeferredRegister;
 import mekanism.common.registration.impl.TileEntityTypeRegistryObject;
 import mekanism.common.tile.base.TileEntityMekanism;
 import moremultiblock.MoreMultiblock;
-import moremultiblock.common.tile.multiblock.TileEntityLaserCoreCasing;
-import moremultiblock.common.tile.multiblock.TileEntityLaserCorePort;
-import moremultiblock.common.tile.multiblock.TileEntityRadioactiveWasteValve;
-import moremultiblock.common.tile.multiblock.TileEntityRadioactiveWasteVault;
+import moremultiblock.common.tile.multiblock.*;
 
 public class MMBTileEntityTypes {
     private MMBTileEntityTypes() {
@@ -25,4 +22,7 @@ public class MMBTileEntityTypes {
 
     public static final TileEntityTypeRegistryObject<TileEntityLaserCorePort> LASER_CORE_PORT
             = TILE_ENTITY_TYPES.register(MMBBlocks.LASER_CORE_PORT, TileEntityLaserCorePort::new, TileEntityMekanism::tickServer, TileEntityMekanism::tickClient);
+
+    public static final TileEntityTypeRegistryObject<TileEntityLaserCore> LASER_CORR
+            = TILE_ENTITY_TYPES.register(MMBBlocks.LASER_CORE, TileEntityLaserCore::new, TileEntityMekanism::tickServer, TileEntityMekanism::tickClient);
 }
