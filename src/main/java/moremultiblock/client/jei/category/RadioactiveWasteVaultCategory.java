@@ -11,6 +11,7 @@ import mekanism.common.config.MekanismConfig;
 import mekanism.common.util.UnitDisplayUtils;
 import mekanism.common.util.text.TextUtils;
 import mezz.jei.api.helpers.IGuiHelper;
+import mezz.jei.api.recipe.RecipeType;
 import moremultiblock.MoreMultiblock;
 import moremultiblock.common.MMBLang;
 import moremultiblock.common.registries.MMBBlocks;
@@ -23,8 +24,9 @@ import net.minecraft.world.level.block.Block;
 import java.util.function.Consumer;
 
 public class RadioactiveWasteVaultCategory extends MultiblockCategory<RadioactiveWasteVaultCategory.RadioactiveWasteVaultWidget> {
+    public static final RecipeType<RadioactiveWasteVaultCategory.RadioactiveWasteVaultWidget> RECIPE_TYPE = MultiblockCategory.createRecipeType(MoreMultiblock.rl("radioactive_waste_vault"), RadioactiveWasteVaultWidget.class);
     public RadioactiveWasteVaultCategory(IGuiHelper helper) {
-        super(helper, MoreMultiblock.rl("radioactive_waste_vault"), RadioactiveWasteVaultWidget.class, MMBLang.RADIOACTIVE_WASTE_VAULT.translate(), MMBBlocks.RADIOACTIVE_WASTE_VAULT.getItemStack());
+        super(helper, RECIPE_TYPE, MMBLang.RADIOACTIVE_WASTE_VAULT.translate(), MMBBlocks.RADIOACTIVE_WASTE_VAULT.getItemStack());
     }
 
     @Override
@@ -85,14 +87,14 @@ public class RadioactiveWasteVaultCategory extends MultiblockCategory<Radioactiv
         protected void collectCost(ICostConsumer consumer) {
             super.collectCost(consumer);
 
-            int corners = this.getCornerBlocks();
+            int edges = this.getEdgeBlocks();
             int sides = this.getSideBlocks();
             int valves = this.getValveCount();
             sides -= valves;
 
             int tanks = 0;
 
-            tanks = corners + sides;
+            tanks = edges + sides;
 
 
             consumer.accept(new ItemStack(MMBBlocks.RADIOACTIVE_WASTE_VAULT, tanks));
